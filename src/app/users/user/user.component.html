@@ -1,1 +1,10 @@
-<p>user works!</p>
+<div class="alert alert-info" role="alert" *ngIf="loading">
+  Cargando ...
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="error">
+  Error: <pre> {{error | json }}</pre>
+</div>
+
+<p>
+  {{ user | json }}
+</p>
